@@ -42,10 +42,9 @@ export default function TrainingScreen() {
             size="large"
             variant="outlined"
             color="secondary"
-            onClick={(e) => handleNext(e)}
+            onClick={handleNext}
           >
-            {" "}
-            Next{" "}
+            Next
           </Button>
           <Button
             size="large"
@@ -53,8 +52,7 @@ export default function TrainingScreen() {
             color="secondary"
             onClick={(e) => handleShow(e)}
           >
-            {" "}
-            Show{" "}
+            Show
           </Button>
           <br />
           <br />
@@ -64,10 +62,22 @@ export default function TrainingScreen() {
             <Card>
               <CardContent
                 className="KanjiCard"
-                style={{ backgroundColor: color }}
+                style={{
+                  backgroundColor: color,
+                  cursor: "pointer",
+                  userSelect: "none" /* Prevent selection */,
+                  "-webkit-user-select": "none",
+                  "-moz-user-select": "none",
+                  "-ms-user-select": "none",
+
+                  outline: "none",
+                }}
+                onClick={handleNext}
               >
                 <Typography
-                  style={{ fontSize: "6rem" }}
+                  style={{
+                    fontSize: "6rem",
+                  }}
                   className="Kanji"
                   key={data.Kanji}
                 >

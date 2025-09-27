@@ -70,7 +70,7 @@ const MultOptKanji = () => {
 
   const showKanji = () => {
     return (
-      <Container className="Container">
+      <Container className="Container" style={{ maxWidth: "1000px" }}>
         <Container>
           <Paper>
             <Card>
@@ -107,7 +107,7 @@ const MultOptKanji = () => {
 
   const optionsGrid = () => {
     return (
-      <Container>
+      <Container style={{ maxWidth: "1000px" }}>
         <Paper>
           <Card>
             <CardContent
